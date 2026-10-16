@@ -4,260 +4,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover Crestfield Academy, where academic excellence, creativity and character prepare students for a brighter future.">
-  <title>Crestfield Academy | Building Minds, Shaping Tomorrow</title>
+  <meta name="theme-color" content="#173d30">
+  <meta name="description" content="Discover Crestfield Academy, a school concept built around academic excellence, character, creativity and lifelong discovery.">
+  <title>Crestfield Academy — A Higher Standard of Learning</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
   <div class="announcement">
-    <p>ADMISSIONS OPEN FOR THE 2026/2027 ACADEMIC SESSION</p>
-    <a href="#admissions">Apply now <span>↗</span></a>
+    <p>DISCOVER A DIFFERENT KIND OF EDUCATION</p>
+    <a href="#admissions">Admissions enquiries <span>↗</span></a>
   </div>
 
-  <header class="header">
-    <a href="#home" class="brand">
-      <span class="brand-icon">C</span>
-      <span class="brand-text">
+  <header class="header" id="top">
+    <a class="brand" href="#top" aria-label="Crestfield Academy home">
+      <span class="brand-mark"><span>C</span></span>
+      <span class="brand-copy">
         <strong>CRESTFIELD</strong>
         <small>ACADEMY</small>
       </span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About us</a>
-      <a href="#academics">Academics</a>
-      <a href="#life">Campus life</a>
-      <a href="#contact">Contact</a>
-      <a href="#admissions" class="nav-cta">Apply for admission <span>↗</span></a>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="#about">Our school</a>
+      <a href="#learning">Learning</a>
+      <a href="#campus">Campus life</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact" class="nav-contact">Get in touch <span>↗</span></a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-content reveal">
-        <span class="eyebrow"><span class="eyebrow-line"></span> EXCELLENCE WITH PURPOSE</span>
+    <section class="hero">
+      <img
+        class="hero-photo"
+        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=90"
+        alt="Students learning together in a bright classroom"
+        fetchpriority="high"
+      >
+      <div class="hero-overlay"></div>
 
-        <h1>Where bright<br>futures <span>begin.</span></h1>
-
-        <p class="hero-description">
-          More than a school, we're a community that inspires curiosity,
-          builds character and prepares every student to make a difference.
+      <div class="hero-content">
+        <div class="hero-kicker"><span></span> A SCHOOL FOR WHAT COMES NEXT</div>
+        <h1>Growing minds.<br>Shaping <em>tomorrow.</em></h1>
+        <p>
+          An inspiring learning community where curiosity is encouraged,
+          character is nurtured and every student is empowered to discover
+          their potential.
         </p>
-
         <div class="hero-actions">
-          <a href="#admissions" class="button button-gold">Begin your journey <span>↗</span></a>
-          <a href="#about" class="text-link">Discover Crestfield <span>→</span></a>
-        </div>
-
-        <div class="hero-proof">
-          <div class="proof-avatars">
-            <span>A</span><span>B</span><span>C</span><span>D</span>
-          </div>
-          <div>
-            <strong>A community that cares</strong>
-            <p>Every learner. Every possibility.</p>
-          </div>
+          <a class="button button-gold" href="#admissions">Discover admissions <span>↗</span></a>
+          <a class="button button-outline" href="#about">Explore Crestfield <span>↓</span></a>
         </div>
       </div>
 
-      <div class="hero-visual reveal">
-        <img
-          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85"
-          alt="Students learning together in a bright classroom"
-          class="hero-image"
-        >
-
-        <div class="image-label">
-          <span class="label-symbol">✳</span>
-          <div>
-            <strong>Learn with purpose.</strong>
-            <p>Grow with confidence.</p>
-          </div>
-        </div>
-
-        <div class="vertical-label">LEARNING WITHOUT LIMITS</div>
-      </div>
+      <div class="hero-side-note">KNOWLEDGE · CHARACTER · POSSIBILITY</div>
 
       <div class="hero-bottom">
-        <span>LAGOS, NIGERIA</span>
-        <span>KNOWLEDGE · CHARACTER · EXCELLENCE</span>
-        <a href="#about">SCROLL TO EXPLORE ↓</a>
+        <span class="location-label"><span class="location-dot"></span> LAGOS, NIGERIA</span>
+        <a href="#about">SCROLL TO DISCOVER <span>↓</span></a>
       </div>
     </section>
 
-    <section class="stats-section" aria-label="School highlights">
-      <div class="stat">
-        <strong>25<span>+</span></strong>
-        <p>Years of excellence</p>
-      </div>
-      <div class="stat">
-        <strong>1<span>:</span>15</strong>
-        <p>Teacher–student ratio</p>
-      </div>
-      <div class="stat">
-        <strong>20<span>+</span></strong>
-        <p>Clubs and activities</p>
-      </div>
-      <div class="stat">
-        <strong>100<span>%</span></strong>
-        <p>Commitment to growth</p>
-      </div>
+    <section class="intro-strip">
+      <p>AN EDUCATION THAT GOES <em>BEYOND THE CLASSROOM.</em></p>
+      <span>Thoughtfully designed for curious minds.</span>
     </section>
 
-    <section class="section about-section" id="about">
-      <div class="section-image reveal">
+    <section class="intro section" id="about">
+      <div class="intro-visual reveal">
         <img
-          src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1000&q=85"
-          alt="Students collaborating during a classroom lesson"
+          src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1100&q=85"
+          alt="Students participating in a classroom lesson"
           loading="lazy"
         >
-        <div class="image-caption">
-          <span>01 / OUR PHILOSOPHY</span>
-          <strong>Education for a<br>changing world.</strong>
+        <div class="visual-caption">
+          <span class="caption-number">01</span>
+          <div>
+            <strong>Room to explore.</strong>
+            <p>Confidence to become.</p>
+          </div>
         </div>
+        <div class="visual-stamp">LEARN<br>GROW<br>THRIVE</div>
       </div>
 
-      <div class="section-copy reveal">
-        <span class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO CRESTFIELD</span>
-        <h2>Every child has a future worth <span>discovering.</span></h2>
-        <p>
-          We believe education should do more than prepare students for
-          examinations. It should empower them to think independently,
-          act with integrity and approach the world with confidence.
+      <div class="intro-copy reveal">
+        <p class="eyebrow"><span></span> WELCOME TO CRESTFIELD</p>
+        <h2>Education should open <em>every door.</em></h2>
+        <p class="body-copy">
+          We believe a great education is about more than what students
+          know. It is about how they think, how they treat others and how
+          confidently they approach the world around them.
         </p>
-        <p>
-          Through inspiring teaching, supportive relationships and
-          meaningful experiences, we help every learner discover what
-          they're capable of becoming.
+        <p class="body-copy">
+          Our vision brings rigorous learning together with creativity,
+          individual support and a strong sense of community — helping
+          every learner build a foundation for a meaningful future.
         </p>
-        <a href="#academics" class="button button-dark">Explore our approach <span>↗</span></a>
+        <a href="#learning" class="underlined-link">Discover our philosophy <span>↗</span></a>
+
+        <div class="signature">
+          <span class="signature-mark">C.</span>
+          <span><strong>Curiosity with purpose.</strong><small>A commitment to lifelong learning</small></span>
+        </div>
       </div>
     </section>
 
-    <section class="academics section" id="academics">
+    <section class="values">
+      <div class="values-heading reveal">
+        <p class="eyebrow eyebrow-light"><span></span> THE CRESTFIELD DIFFERENCE</p>
+        <h2>More than lessons.<br><em>A lasting foundation.</em></h2>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card reveal">
+          <span class="value-index">01 / THINK</span>
+          <span class="value-symbol">✳</span>
+          <h3>Curiosity first</h3>
+          <p>Encouraging students to ask thoughtful questions, explore new ideas and find confidence in discovery.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-index">02 / GROW</span>
+          <span class="value-symbol">◇</span>
+          <h3>Character always</h3>
+          <p>Developing responsibility, empathy and integrity alongside the knowledge students gain in class.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-index">03 / BECOME</span>
+          <span class="value-symbol">↗</span>
+          <h3>Potential unlocked</h3>
+          <p>Making space for individual strengths, creative thinking and the courage to pursue ambitious goals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="learning section" id="learning">
       <div class="section-heading reveal">
         <div>
-          <span class="eyebrow"><span class="eyebrow-line"></span> OUR ACADEMIC APPROACH</span>
-          <h2>A strong foundation.<br><span>Limitless possibilities.</span></h2>
+          <p class="eyebrow"><span></span> LEARNING AT CRESTFIELD</p>
+          <h2>Built on strong foundations.<br><em>Designed for possibility.</em></h2>
         </div>
-        <p>Challenging minds, encouraging discovery and helping students build the skills they need for tomorrow.</p>
+        <p class="heading-description">
+          A thoughtful approach to learning helps students build knowledge,
+          discover their interests and prepare for the opportunities ahead.
+        </p>
       </div>
 
-      <div class="program-grid">
-        <article class="program-card reveal">
-          <div class="program-number">01</div>
-          <div class="program-icon">✳</div>
-          <h3>Junior Secondary</h3>
-          <p>Building strong foundations in literacy, numeracy, science and critical thinking.</p>
-          <a href="#admissions">Explore programme <span>↗</span></a>
+      <div class="learning-grid">
+        <article class="learning-card reveal">
+          <div class="learning-image">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85"
+              alt="Student engaged in a learning activity"
+              loading="lazy"
+            >
+            <span class="image-index">01</span>
+          </div>
+          <div class="learning-info">
+            <p class="card-kicker">FOUNDATIONS</p>
+            <h3>Junior Secondary</h3>
+            <p>Building confidence in core subjects, independent thinking and the habits that support lifelong learning.</p>
+            <a href="#admissions">Explore this pathway <span>↗</span></a>
+          </div>
         </article>
 
-        <article class="program-card featured reveal">
-          <div class="program-number">02</div>
-          <div class="program-icon">◇</div>
-          <h3>Senior Secondary</h3>
-          <p>Developing deeper knowledge, academic confidence and readiness for higher education.</p>
-          <a href="#admissions">Explore programme <span>↗</span></a>
+        <article class="learning-card reveal">
+          <div class="learning-image">
+            <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+              alt="Students working together on an academic project"
+              loading="lazy"
+            >
+            <span class="image-index">02</span>
+          </div>
+          <div class="learning-info">
+            <p class="card-kicker">DISCOVERY</p>
+            <h3>Senior Secondary</h3>
+            <p>Deepening subject knowledge, strengthening academic independence and preparing for future study.</p>
+            <a href="#admissions">Explore this pathway <span>↗</span></a>
+          </div>
         </article>
 
-        <article class="program-card reveal">
-          <div class="program-number">03</div>
-          <div class="program-icon">◎</div>
-          <h3>Creative Learning</h3>
-          <p>Expanding horizons through technology, creative arts, teamwork and practical discovery.</p>
-          <a href="#life">Discover activities <span>↗</span></a>
+        <article class="learning-card reveal">
+          <div class="learning-image">
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85"
+              alt="Learner exploring practical technology"
+              loading="lazy"
+            >
+            <span class="image-index">03</span>
+          </div>
+          <div class="learning-info">
+            <p class="card-kicker">INNOVATION</p>
+            <h3>Creative Exploration</h3>
+            <p>Connecting ideas through technology, practical projects, the arts and collaborative problem-solving.</p>
+            <a href="#campus">Discover campus life <span>↗</span></a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="experience-section" id="life">
-      <div class="experience-image">
+    <section class="campus" id="campus">
+      <div class="campus-image">
         <img
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=85"
-          alt="Students celebrating together on a school campus"
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=90"
+          alt="Students gathered on a campus"
           loading="lazy"
         >
+        <div class="campus-image-label">A COMMUNITY THAT INSPIRES</div>
       </div>
-      <div class="experience-content reveal">
-        <span class="eyebrow"><span class="eyebrow-line"></span> BEYOND THE CLASSROOM</span>
-        <h2>Room to grow.<br>Space to <span>become.</span></h2>
-        <p>
-          The most meaningful lessons often happen beyond textbooks.
-          Students are encouraged to explore their interests, develop
-          leadership skills, build friendships and discover new talents.
+
+      <div class="campus-copy reveal">
+        <p class="eyebrow"><span></span> LIFE BEYOND THE LESSON</p>
+        <h2>A place to belong.<br>A space to <em>become.</em></h2>
+        <p class="body-copy">
+          The school experience is richer when students have opportunities
+          to collaborate, express themselves, develop leadership and
+          explore new interests.
         </p>
-        <ul class="experience-list">
-          <li><span>01</span> Sports and physical wellbeing</li>
-          <li><span>02</span> Science, technology and innovation</li>
-          <li><span>03</span> Arts, culture and creativity</li>
-          <li><span>04</span> Leadership and community service</li>
-        </ul>
+
+        <div class="campus-list">
+          <div><span>01</span><p>Sports and wellbeing</p><span class="list-arrow">↗</span></div>
+          <div><span>02</span><p>Science and technology</p><span class="list-arrow">↗</span></div>
+          <div><span>03</span><p>Arts and creative expression</p><span class="list-arrow">↗</span></div>
+          <div><span>04</span><p>Leadership and service</p><span class="list-arrow">↗</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="admissions-section section" id="admissions">
-      <div class="admissions-copy reveal">
-        <span class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT CHAPTER</span>
-        <h2>Big dreams start<br>with a <span>first step.</span></h2>
+    <section class="school-statement">
+      <span class="statement-mark">“</span>
+      <p>Great education is not simply about preparing for the future. It is about helping young people shape it.</p>
+      <span class="statement-credit">THE CRESTFIELD PHILOSOPHY</span>
+    </section>
+
+    <section class="admissions" id="admissions">
+      <div class="admissions-content reveal">
+        <p class="eyebrow eyebrow-light"><span></span> YOUR NEXT CHAPTER</p>
+        <h2>Every great journey<br>begins with <em>a conversation.</em></h2>
         <p>
-          Discover a learning community where your child's potential
-          is taken seriously. Get in touch to learn more about our
-          admissions process.
+          Take the first step towards discovering a learning community
+          built around curiosity, character and possibility.
         </p>
-        <a href="#contact" class="button button-gold">Enquire about admission <span>↗</span></a>
+        <a class="button button-gold" href="#contact">Enquire about admissions <span>↗</span></a>
       </div>
-      <div class="admissions-note reveal">
-        <span class="note-star">✳</span>
-        <p class="note-title">A place to belong.<br>A future to build.</p>
-        <p class="note-small">Curiosity starts here.</p>
+
+      <div class="admissions-aside reveal">
+        <div class="aside-emblem">C</div>
+        <p class="aside-kicker">THE CRESTFIELD PROMISE</p>
+        <p class="aside-title">A thoughtful education.<br>A world of possibilities.</p>
+        <div class="aside-rule"></div>
+        <p class="aside-footer">KNOWLEDGE · CHARACTER · POSSIBILITY</p>
       </div>
     </section>
 
-    <section class="contact-section section" id="contact">
-      <div>
-        <span class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT</span>
-        <h2>We'd love to<br><span>hear from you.</span></h2>
-        <p>Have questions about our school or admissions? Reach out to our team.</p>
+    <section class="contact section" id="contact">
+      <div class="contact-heading reveal">
+        <p class="eyebrow"><span></span> START A CONVERSATION</p>
+        <h2>Let's talk about<br><em>their future.</em></h2>
+        <p>Our sample admissions team is ready to help families learn more about the Crestfield concept.</p>
       </div>
 
-      <div class="contact-details">
-        <div class="contact-item">
+      <div class="contact-panel reveal">
+        <div class="contact-row">
           <span class="contact-icon">⌖</span>
-          <div><small>VISIT US</small><p>Lagos, Nigeria</p></div>
+          <div><small>OUR LOCATION</small><p>Lagos, Nigeria</p></div>
         </div>
-        <div class="contact-item">
+        <div class="contact-row">
           <span class="contact-icon">✉</span>
-          <div><small>EMAIL OUR TEAM</small><p><a href="mailto:admissions@example.com">admissions@example.com</a></p></div>
+          <div><small>EMAIL</small><p><a href="mailto:admissions@example.com">admissions@example.com</a></p></div>
         </div>
-        <a href="https://wa.me/" class="button button-dark whatsapp-button" id="whatsappLink">Chat on WhatsApp <span>↗</span></a>
-        <p class="demo-note">Portfolio demonstration: replace the sample contact details before presenting this as a live school website.</p>
+        <div class="contact-row">
+          <span class="contact-icon">◷</span>
+          <div><small>ADMISSIONS ENQUIRIES</small><p>Contact us to learn more</p></div>
+        </div>
+        <a class="button button-green contact-button" id="whatsappLink" href="https://wa.me/">Chat with admissions <span>↗</span></a>
+        <p class="demo-disclaimer">Demonstration website. Contact details and school information are fictional examples and must be replaced before use by a real school.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <a href="#home" class="brand footer-brand">
-      <span class="brand-icon">C</span>
-      <span class="brand-text"><strong>CRESTFIELD</strong><small>ACADEMY</small></span>
-    </a>
-    <p>Building minds. Shaping tomorrow.</p>
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark"><span>C</span></span>
+        <span class="brand-copy"><strong>CRESTFIELD</strong><small>ACADEMY</small></span>
+      </a>
+      <p>Growing minds. Shaping tomorrow.</p>
+      <a href="#top" class="back-top">BACK TO TOP ↑</a>
+    </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Crestfield Academy. Portfolio concept.</span>
-      <a href="#home">BACK TO TOP ↑</a>
+      <span>© <span id="year"></span> Crestfield Academy.</span>
+      <span>Independent portfolio concept · Not an operating school</span>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
