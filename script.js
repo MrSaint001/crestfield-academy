@@ -2,78 +2,50 @@
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
+// Mobile navigation
 function closeMenu() {
   mainNav.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open navigation");
-  document.body.classList.remove("menu-open");
+  menuToggle.setAttribute("aria-label", "Open menu");
 }
 
 menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+  const open = menuToggle.getAttribute("aria-expanded") !== "true";
 
-  if (isOpen) {
-    mainNav.classList.add("open");
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Close navigation");
-    document.body.classList.add("menu-open");
-  } else {
-    closeMenu();
-  }
+  mainNav.classList.toggle("open", open);
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute(
+    "aria-label",
+    open ? "Close menu" : "Open menu"
+  );
 });
 
-// Close the menu when a navigation link is selected.
+// Close after choosing a navigation link.
 mainNav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
-// Close the menu with Escape.
+// Close using Escape.
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
   }
 });
 
-// Reset the mobile menu when returning to desktop width.
+// Reset navigation when switching to desktop.
 window.addEventListener("resize", () => {
   if (window.innerWidth > 760) {
     closeMenu();
   }
 });
 
-// Automatically update the copyright year.
-document.getElementById("year").textContent = new Date().getFullYear();
+// Automatically update the footer year.
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-// Reveal content smoothly as sections enter the viewport.
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -30px 0px"
-    }
-  );
-
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
-} else {
-  revealElements.forEach((element) => {
-    element.classList.add("visible");
-  });
-}
-
-// Demo contact: insert the real school's WhatsApp number
-// using international format without +, spaces or hyphens.
+// WhatsApp demo contact.
+// Replace the empty string with a real number in international format,
+// without +, spaces or hyphens, before using this for a real school.
 const schoolWhatsAppNumber = "";
 
 const whatsappLink = document.getElementById("whatsappLink");
@@ -83,14 +55,14 @@ whatsappLink.addEventListener("click", (event) => {
     event.preventDefault();
 
     alert(
-      "This is a portfolio demo. Add a school WhatsApp number in script.js to activate this contact button."
+      "Portfolio demo: add the school's WhatsApp number in script.js to activate this contact link."
     );
 
     return;
   }
 
   const message =
-    "Hello, I would like to enquire about admissions at Crestfield Academy.";
+    "Hello, I would like to make an enquiry about Crestfield Academy.";
 
   whatsappLink.href =
     "https://wa.me/" +
